@@ -82,6 +82,13 @@ const loadMoreImages = () => {
     searchImages(currentQuery, currentPage);
 };
 
+const smoothScroll = () => {
+    const { height: cardHeight } = imageGallery.firstElementChild.getBoundingClientRect();
+    window.scrollBy({
+        top: cardHeight * 2,
+        behavior: 'smooth',
+    });
+};
 
 searchForm.addEventListener('submit', onSearchForm);
 loadMoreBtn.addEventListener('click', loadMoreImages);
