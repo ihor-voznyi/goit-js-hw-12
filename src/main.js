@@ -82,6 +82,7 @@ const loadMoreImages = () => {
     searchImages(currentQuery, currentPage);
 };
 
+// Реалізація плавного скролу
 const smoothScroll = () => {
     const { height: cardHeight } = imageGallery.firstElementChild.getBoundingClientRect();
     window.scrollBy({
